@@ -3,6 +3,7 @@
     angular
         .module('rockparade', [
             'ngRoute',
+            'ngCookies',
             'ngResource',
             'endpointsModule'
         ])

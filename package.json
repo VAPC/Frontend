@@ -18,6 +18,7 @@
   "homepage": "https://github.com/VAPC/Frontend#readme",
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-cookies": "^1.5.8",
     "angular-resource": "^1.5.8",
     "angular-route": "^1.5.8",
     "bootstrap": "^3.3.7",

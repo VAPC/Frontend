@@ -12,6 +12,7 @@ gulp.task('vendor:js', function () {
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/angular/angular.min.js',
         'node_modules/angular-route/angular-route.min.js',
+        'node_modules/angular-cookies/angular-cookies.min.js',
         'node_modules/angular-resource/angular-resource.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
     ])

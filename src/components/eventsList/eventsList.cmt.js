@@ -11,17 +11,23 @@
 
     function eventsListCtrl(eventsEndpoint) {
         var vm = this;
-        console.log('cl eventsEndpoint', eventsEndpoint);
 
         eventsEndpoint.getResource().getEvents({}, function (response) {
-            vm.events = response;
+            vm.events = response.data;
         });
+
         return vm;
     }
 
     function template() {
         return `
-            <div>{{$ctrl.events}}</div>
+            <div class="panel panel-default" ng-repeat="item in $ctrl.events">
+              <div class="panel-body">
+                <h3>{{item.name}}</h3>
+                <p>{{item.description}}</p>
+                <p>{{item.date}}</p>
+                </div>
+            </div>
         `;
     }
 
