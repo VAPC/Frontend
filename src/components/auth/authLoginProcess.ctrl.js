@@ -11,8 +11,10 @@
             expireDate.setDate(expireDate.getDate() + 14);
             $cookies.put('AUTH-TOKEN', $routeParams.token, {'expires': expireDate});
         }
-        $location.path('/#');
         $rootScope.$emit('authChanged');
+        setTimeout(function () {
+            $location.path('/#');
+        });
         return vm;
     }
 }());
