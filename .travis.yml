@@ -6,7 +6,13 @@ after_success:
     - mv integration/deploy.key.gpg .
     - gpg --yes --batch --passphrase=${DEPLOY_KEY_PASSWORD} deploy.key.gpg
     - chmod 600 deployer.key
+    - mv deployer.key ~/.ssh
     - ssh-keyscan ${DEPLOY_SSH_HOST} >> ~/.ssh/known_hosts
-    - ssh-add deployer.key
-    - git remote add deploy ssh://${DEPLOY_SSH_USER}@${DEPLOY_SSH_HOST}/~/git/rockparade-frontend
+
+    - echo "Host deploy" >> ~/.ssh/config
+    - echo "  HostName ${DEPLOY_SSH_HOST}" >> ~/.ssh/config
+    - echo "  User ${DEPLOY_SSH_USER}" >> ~/.ssh/config
+    - echo "  IdentityFile ~/.ssh/deployer.key" >> ~/.ssh/config
+
+    - git remote add deploy ssh://deploy/~/git/rockparade-frontend
     - git push deploy
