@@ -13,7 +13,7 @@
         }
         $rootScope.$emit('authChanged');
         setTimeout(function () {
-            $location.path('/#');
+            $location.path('/#/home');
         });
         return vm;
     }
