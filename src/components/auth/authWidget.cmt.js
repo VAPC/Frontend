@@ -14,23 +14,27 @@
                             $rootScope) {
         var vm = this;
         vm.loginUrl = apiUrl + '/login/vk';
-
-        authService.getCurrentUser().then(function (response) {
-            console.log('cl response', response);
-            vm.user = response.data;
-        });
         vm.isAuth = authService.isAuth();
-
         vm.login = authService.login;
-
         vm.logout = logout;
+        $rootScope.$on('authChanged', authChanged);
+
+        if (vm.isAuth) {
+            authService.getCurrentUser().then(function (response) {
+                console.log('cl response', response);
+                vm.user = response.data;
+            });
+        }
 
         return vm;
 
         function logout() {
             authService.logout();
-            vm.isAuth = authService.isAuth();
             $rootScope.$emit('authChanged');
+        }
+
+        function authChanged() {
+            vm.isAuth = authService.isAuth();
         }
 
     }
