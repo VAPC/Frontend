@@ -1,3 +1,4 @@
+language: nodejs
 install: true
 
 after_success:
