@@ -1,12 +1,14 @@
 angular.module('endpointsModule')
     .service('authEndpoint', authEndpoint);
 
-authEndpoint.$inject = ['$resource', 'apiUrl'];
+authEndpoint.$inject = ['$resource', 'apiUrl', '$cookies'];
 
-function authEndpoint($resource, apiUrl) {
+function authEndpoint($resource, apiUrl, $cookies) {
     'use strict';
 
     var queryParam = {};
+    var token = $cookies.get('AUTH-TOKEN');
+    var star = '*';
 
     return {
         getResource: getResource
