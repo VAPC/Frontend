@@ -9,4 +9,5 @@
             'endpointsModule',
             'authModule',
         ]);
+    console.info('ver 1.0.1');
 }());
