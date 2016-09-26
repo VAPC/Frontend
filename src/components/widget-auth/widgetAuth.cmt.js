@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
     angular
         .module('rockparade')
@@ -8,23 +8,29 @@
         });
 
     authWidgetCtrl.$inject = ['authService',
-    'apiUrl'];
+        'apiUrl'];
 
     function authWidgetCtrl(authService,
                             apiUrl) {
         var vm = this;
-        vm.loginUrl = apiUrl;
+        vm.loginUrl = apiUrl + '/login/vk';
 
-        authService.getCurrentUser().then(function(responce){
-            console.log('cl responce', responce);
-        });
+        // authService.getCurrentUser().then(function(responce){
+        //     console.log('cl responce', responce);
+        // });
+
+        vm.login = authService.login;
 
         return vm;
+
     }
 
     function template() {
         return `
-            <div ng-if="!$ctrl.uid"><a href="$ctrl.loginUrl">Login with Vkontakte</a></div>
+            <div ng-if="!$ctrl.uid">
+            <button ng-click="$ctrl.login()">Login with Vkontakte</button>
+            <a href="{{$ctrl.loginUrl}}">Login with Vkontakte</a>
+            </div>
          `;
     }
 

@@ -10,15 +10,25 @@ function authService(authEndpoint,
     var currentUserDefer;
 
     return {
-        getCurrentUser: getCurrentUser
+        login: login,
+        getCurrentUser: getCurrentUser,
     };
+
+    function login() {
+        authEndpoint.getResource().login({}, function(response) {
+                console.log('cl response:', response);
+            }, function(response) {
+                console.log('cl response:', response);
+            }
+        );
+    }
 
     function getCurrentUser() {
         if (!currentUserDefer) {
             currentUserDefer = $q.defer;
-            authEndpoint.getResource().getCurrentUser({}, function (response) {
+            authEndpoint.getResource().getCurrentUser({}, function(response) {
                     currentUserDefer.resolve(response);
-                }, function (response) {
+                }, function(response) {
                     currentUserDefer.reject(response);
                 }
             );

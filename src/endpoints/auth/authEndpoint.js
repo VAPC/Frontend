@@ -13,8 +13,19 @@ function authEndpoint($resource, apiUrl) {
     };
 
     function getResource() {
-        return $resource(apiUrl + '/user', queryParam, {
+        return $resource(apiUrl + '/:entity/:type', queryParam, {
             getCurrentUser: {
+                params: {
+                    entity: 'user'
+                },
+                method: 'GET',
+                isArray: false
+            },
+            login: {
+                params: {
+                    entity: 'login',
+                    type: 'vk',
+                },
                 method: 'GET',
                 isArray: false
             }
