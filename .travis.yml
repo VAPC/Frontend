@@ -1,0 +1,9 @@
+after_success:
+    - eval "$(ssh-agent -s)" # start the ssh agent
+    - echo -e "-----BEGIN RSA PRIVATE KEY-----\n" > deployer.key
+    - echo ${SSH_KEY} > deployer.key
+    - echo -e "\n-----END RSA PRIVATE KEY-----" > deployer.key
+    - chmod 600 deployer.key
+    - ssh-add deployer.key
+    - git remote add deploy ssh://${DEPLOY_SSH_USER}@${DEPLOY_SSH_HOST}/~/git/rockparade-frontend
+    - git push deploy
