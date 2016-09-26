@@ -15,9 +15,10 @@
         var vm = this;
         vm.loginUrl = apiUrl + '/login/vk';
 
-        // authService.getCurrentUser().then(function (responce) {
-        //     console.log('cl responce', responce);
-        // });
+        authService.getCurrentUser().then(function (response) {
+            console.log('cl response', response);
+            vm.user = response.data;
+        });
         vm.isAuth = authService.isAuth();
 
         vm.login = authService.login;
@@ -40,6 +41,7 @@
             <a href="{{$ctrl.loginUrl}}">Login with Vkontakte</a>
             </div>
             <div ng-if="$ctrl.isAuth">
+            <div>Hi, {{$ctrl.user.login}}!</div>
             <a ng-click="$ctrl.logout()">Logout</a>
             </div>
          `;
