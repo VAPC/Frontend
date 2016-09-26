@@ -1,3 +1,5 @@
+install: true
+
 after_success:
     - eval "$(ssh-agent -s)" # start the ssh agent
     - echo -e "-----BEGIN RSA PRIVATE KEY-----\n" > deployer.key
