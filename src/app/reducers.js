@@ -1,13 +1,36 @@
-(function() {
+(function () {
 
-    function reducers(state = 0, action) {
+    var defaultState = {
+        location: {
+            path: '',
+            hashSearch: '',
+        },
+        search: {
+            query: '',
+        },
+        user: {
+            uid: '',
+            name: '',
+        },
+    };
+
+    function reducers(state = defaultState, action) {
         switch (action.type) {
-            case 'plus':
-                return state + 1;
-            case 'minus':
-                return state - 1;
+
+            case 'CHANGE_SEARCH_STRING':
+                state.search.query = action.value;
+                return Object.assign(state);
+
+            case 'LOCATION':
+                state.location.path = action.value;
+                return Object.assign(state);
+            case 'HASH_SEARCH':
+                state.location.hashSearch = action.value;
+                return Object.assign(state);
+
             default:
                 return state;
+
         }
     }
 

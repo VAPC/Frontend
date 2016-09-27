@@ -1,8 +1,39 @@
 (function () {
     angular.module('rockparade')
         .component('content', {
+            controller: contentController,
             template: template
         });
+
+    contentController.$inject = [
+        '$ngRedux',
+        'memoize',
+        '$location'];
+
+    function contentController($ngRedux,
+                               memoize,
+                               $location) {
+        var vm = this;
+
+        this.setLocation = memoize(function (value) {
+            if (value) {
+                $location.path(value);
+            }
+        });
+        this.setHashSearch = memoize(function (value) {
+            if (value) {
+                $location.search(value);
+            }
+        });
+
+        $ngRedux.subscribe(() => {
+            let state = $ngRedux.getState();
+            this.setLocation(state.location.path);
+            this.setHashSearch(state.location.hashSearch);
+        });
+
+        return vm;
+    }
 
     function template() {
         return `

@@ -1,25 +1,34 @@
-(function() {
+(function () {
     angular
         .module('rockparade')
-        .service('actionsService', actionsService);
+        .service('actions', actions);
 
-    actionsService.$inject = [];
+    actions.$inject = [];
 
-    function actionsService() {
+    function actions() {
         return {
-            plus: plus,
-            minus: minus
+            changeSearchString: changeSearchString,
+            location: location,
+            hashSearch:hashSearch,
         };
 
-        function plus() {
+        function changeSearchString(value) {
             return {
-                type: 'PLUS'
+                type: 'CHANGE_SEARCH_STRING',
+                value: value
             }
         }
 
-        function minus() {
+        function location(value) {
             return {
-                type: 'MINUS'
+                type: 'LOCATION',
+                value: value
+            }
+        }
+        function hashSearch(value) {
+            return {
+                type: 'HASH_SEARCH',
+                value: value
             }
         }
     }

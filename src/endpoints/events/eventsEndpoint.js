@@ -13,10 +13,21 @@ function eventsEndpoint($resource, apiUrl, $q) {
     };
 
     function getResource() {
-        return $resource(apiUrl + '/events', queryParam, {
+        return $resource(apiUrl + '/events/:like/:searchString/:limit/:offset', queryParam, {
+            getEventsAll: {
+                method: 'GET',
+                isArray: false,
+                params: {
+                    like: null,
+                    searchString: null,
+                }
+            },
             getEvents: {
                 method: 'GET',
-                isArray: false
+                isArray: false,
+                params: {
+                    like: 'like',
+                }
             }
         });
     }

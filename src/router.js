@@ -20,6 +20,9 @@
             .when('/artists', {
                 templateUrl: 'artists.html',
             })
+            .when('/search?:bla', {
+                templateUrl: 'search.html',
+            })
             .when('/login/vk/callback', {
                 controller: 'authLoginProcessCtrl',
                 template: '',

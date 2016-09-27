@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
     angular
         .module('searchModule')
@@ -7,24 +7,44 @@
             template: template
         });
 
-    searchWidgetCtrl.$inject = ['$ngRedux',
-        'actionsService'];
+    searchWidgetCtrl.$inject = [
+        '$ngRedux',
+        'actions'
+    ];
 
     function searchWidgetCtrl($ngRedux,
-                              actionsService) {
+                              actions) {
         var vm = this;
 
-        $ngRedux.connect(mapStateToThis, actionsService)(vm);
-        $ngRedux.dispatch(actionsService.plus());
+        var unconnect = $ngRedux.connect(mapStateToThis, actions)(vm);
+
+        this.query = '';
+        this.searchKeyPress = searchKeyPress;
+        this.searchKeyUp = searchKeyUp;
+        this.$onDestroy = $onDestroy;
 
         return vm;
 
         function mapStateToThis(state) {
-            console.log('cl state:', state);
-
             return {
-                counter: (state)
+                state: state
             }
+        }
+
+        function searchKeyPress(e) {
+            if (e.charCode === 13) {
+                e.preventDefault();
+                $ngRedux.dispatch(actions.location('/search'));
+                $ngRedux.dispatch(actions.hashSearch('q=' + this.query));
+            }
+        }
+
+        function searchKeyUp(e) {
+            $ngRedux.dispatch(actions.changeSearchString(this.query));
+        }
+
+        function $onDestroy() {
+            unconnect();
         }
 
     }
@@ -34,8 +54,9 @@
             <div>
                 <input type="search" 
                     class="form-control" 
-                    ng-keyup="$ctrl.searchKeyup()" 
-                    ng-model="$ctrl.searchString"
+                    ng-keypress="$ctrl.searchKeyPress($event)"
+                    ng-keyup="$ctrl.searchKeyUp($event)"
+                    ng-model="$ctrl.query"
                     placeholder="Поиск">
             </div>
         `;
