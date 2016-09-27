@@ -321,7 +321,7 @@ function authService(authEndpoint,
                     <li ng-if="$ctrl.isAuth"><a href="#/home">Моя страница</a></li> 
                     <li><a href="#/events">Мероприятия</a></li> 
                     <li><a href="#/artists">Артисты</a></li> 
-                    <li><a>Блог</a></li> 
+                    <li><a>Блог [test]</a></li> 
                 </ul>
             </div>
         `;
