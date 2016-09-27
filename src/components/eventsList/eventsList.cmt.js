@@ -7,16 +7,44 @@
             template: template
         });
 
-    eventsListCtrl.$inject = ['eventsEndpoint'];
+    eventsListCtrl.$inject = [
+        '$ngRedux',
+        'memoize',
+        'eventsEndpoint'
+    ];
 
-    function eventsListCtrl(eventsEndpoint) {
+    function eventsListCtrl($ngRedux,
+                            memoize,
+                            eventsEndpoint) {
         var vm = this;
 
-        eventsEndpoint.getResource().getEvents({}, function (response) {
-            vm.events = response.data;
+        this.$onDestroy = $onDestroy;
+
+        this.getEvents = memoize(function (value) {
+            if (value) {
+                eventsEndpoint.getResource().getEvents({searchString: value}, function (response) {
+                    vm.events = response.data;
+                });
+            } else {
+                eventsEndpoint.getResource().getEventsAll({}, function (response) {
+                    vm.events = response.data;
+                });
+            }
         });
 
+        var unconnect = $ngRedux.subscribe(() => {
+            let state = $ngRedux.getState();
+            this.getEvents(state.search.query);
+        });
+
+        this.getEvents();
+
+
         return vm;
+
+        function $onDestroy() {
+            unconnect();
+        }
     }
 
     function template() {
