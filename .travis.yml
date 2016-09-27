@@ -2,7 +2,6 @@ language: node_js
 install: true
 
 after_success:
-    - eval "$(ssh-agent -s)" # start the ssh agent
     - mv integration/deploy.key.gpg .
     - gpg --yes --batch --passphrase=${DEPLOY_KEY_PASSWORD} deploy.key.gpg
     - chmod 600 deployer.key
@@ -13,6 +12,8 @@ after_success:
     - echo "  HostName ${DEPLOY_SSH_HOST}" >> ~/.ssh/config
     - echo "  User ${DEPLOY_SSH_USER}" >> ~/.ssh/config
     - echo "  IdentityFile ~/.ssh/deployer.key" >> ~/.ssh/config
+
+    - cat ~/.ssh/config
 
     - git remote add deploy ssh://deploy/~/git/rockparade-frontend
     - git push deploy
