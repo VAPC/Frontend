@@ -13,8 +13,5 @@ after_success:
     - echo "  User ${DEPLOY_SSH_USER}" >> ~/.ssh/config
     - echo "  IdentityFile ~/.ssh/deploy.key" >> ~/.ssh/config
 
-    - cat ~/.ssh/config
-    - cat ~/.ssh/deploy.key
-
     - git remote add deploy ssh://deploy/~/git/rockparade-frontend
     - git push deploy
