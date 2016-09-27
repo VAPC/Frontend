@@ -4,18 +4,14 @@ install: true
 after_success:
     - mv integration/deploy.key.gpg .
     - gpg --yes --batch --passphrase=${DEPLOY_KEY_PASSWORD} deploy.key.gpg
-    - chmod 600 deployer.key
-    - mv deployer.key ~/.ssh
+    - chmod 600 deploy.key
+    - mv deploy.key ~/.ssh
     - ssh-keyscan ${DEPLOY_SSH_HOST} >> ~/.ssh/known_hosts
-    - ls -laht
 
     - echo "Host deploy" >> ~/.ssh/config
     - echo "  HostName ${DEPLOY_SSH_HOST}" >> ~/.ssh/config
     - echo "  User ${DEPLOY_SSH_USER}" >> ~/.ssh/config
-    - echo "  IdentityFile ~/.ssh/deployer.key" >> ~/.ssh/config
-
-    - cat ~/.ssh/config
-    - cat ~/.ssh/deployer.key
+    - echo "  IdentityFile ~/.ssh/deploy.key" >> ~/.ssh/config
 
     - git remote add deploy ssh://deploy/~/git/rockparade-frontend
     - git push deploy
