@@ -1,6 +1,10 @@
 language: node_js
 install: true
 
+branches:
+    only:
+      - master
+
 after_success:
     - mv integration/deploy.key.gpg .
     - gpg --yes --batch --passphrase=${DEPLOY_KEY_PASSWORD} deploy.key.gpg
