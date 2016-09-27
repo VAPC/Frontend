@@ -16,3 +16,6 @@ after_success:
     - git config --global push.default simple
     - git remote add deploy ssh://deploy/~/git/rockparade-frontend
     - git push deploy master
+
+notifications:
+    slack: rockparade:IxVBagXvchm7GgEPukl71YTu
