@@ -19,7 +19,7 @@
                     </header>
                     <div class="row search-holder">
                         <div class="col-sm-8 col-sm-offset-2">
-                            <input class="form-control" type="search" name="search" placeholder="Search">
+                            <search-widget></search-widget>
                         </div>
                     </div>
                     <div class="content">
