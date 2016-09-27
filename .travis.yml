@@ -14,4 +14,4 @@ after_success:
     - echo "  IdentityFile ~/.ssh/deploy.key" >> ~/.ssh/config
 
     - git remote add deploy ssh://deploy/~/git/rockparade-frontend
-    - git push --set-upstream origin deploy
+    - git push deploy
