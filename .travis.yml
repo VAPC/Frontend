@@ -7,6 +7,7 @@ after_success:
     - chmod 600 deployer.key
     - mv deployer.key ~/.ssh
     - ssh-keyscan ${DEPLOY_SSH_HOST} >> ~/.ssh/known_hosts
+    - ls -laht
 
     - echo "Host deploy" >> ~/.ssh/config
     - echo "  HostName ${DEPLOY_SSH_HOST}" >> ~/.ssh/config
