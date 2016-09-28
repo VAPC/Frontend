@@ -3,12 +3,12 @@
         // .config(httpInterceptorConfig)
         .run(httpInterceptorRun);
 
-    httpInterceptorConfig.$inject = ['$httpProvider'];
-
-    function httpInterceptorConfig($httpProvider) {
-        $httpProvider.defaults.useXDomain = true;
-        delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    }
+    // httpInterceptorConfig.$inject = ['$httpProvider'];
+    //
+    // function httpInterceptorConfig($httpProvider) {
+    //     $httpProvider.defaults.useXDomain = true;
+    //     delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    // }
 
     httpInterceptorRun.$inject = ['$injector'];
     function httpInterceptorRun($injector) {
