@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
     angular
         .module('rockparade')
@@ -51,7 +51,7 @@
         return `
             <div class="panel panel-default" ng-repeat="item in $ctrl.events">
               <div class="panel-body">
-                <h3>{{item.name}}</h3>
+                <h3><a href="#/event/{{item.id}}">{{item.name}}</a></h3>
                 <p>{{item.description}}</p>
                 <p>{{item.date}}</p>
                 </div>

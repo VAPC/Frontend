@@ -28,7 +28,7 @@ function eventsEndpoint($resource, apiUrl, $q) {
                 params: {
                     like: 'like',
                 }
-            }
+            },
         });
     }
 }

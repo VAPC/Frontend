@@ -14,6 +14,9 @@
             .when('/home', {
                 templateUrl: 'home.html',
             })
+            .when('/event/:id', {
+                templateUrl: 'event.html',
+            })
             .when('/events', {
                 templateUrl: 'events.html',
             })
