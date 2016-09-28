@@ -8,15 +8,15 @@
         });
 
     eventInfoCtrl.$inject = [
-        'eventsEndpoint',
+        'eventEndpoint',
         '$routeParams'];
 
-    function eventInfoCtrl(eventsEndpoint,
+    function eventInfoCtrl(eventEndpoint,
                            $routeParams) {
         var vm = this;
         vm.id = $routeParams.id;
 
-        eventsEndpoint.getResource().getEvent({id: vm.id}, function (response) {
+        eventEndpoint.getResource().getEvent({id: vm.id}, function (response) {
             vm.eventData = response.data;
         });
 
