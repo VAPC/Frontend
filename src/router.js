@@ -20,8 +20,14 @@
             .when('/events', {
                 templateUrl: 'events.html',
             })
-            .when('/artists', {
-                templateUrl: 'artists.html',
+            .when('/bands', {
+                templateUrl: 'bands.html',
+            })
+            .when('/band/:id', {
+                templateUrl: 'band.html',
+            })
+            .when('/bandCreate', {
+                templateUrl: 'bandCreate.html',
             })
             .when('/search?:bla', {
                 templateUrl: 'search.html',
