@@ -50,6 +50,7 @@
                 <p>register: {{item.registration_date}}</p>
                 <p>members: {{item.members}}</p>
                 <p>creator: {{item.creator}}</p>
+                <p><a href="#/bandEdit/{{item.id}}">Редактировать</a></p>
                 </div>
             </div>
         `;
