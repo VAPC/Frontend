@@ -6,14 +6,12 @@ bandEndpoint.$inject = ['$resource', 'apiUrl', '$q'];
 function bandEndpoint($resource, apiUrl, $q) {
     'use strict';
 
-    var queryParam = {};
-
     return {
         getResource: getResource
     };
 
-    function getResource() {
-        return $resource(apiUrl + '/band/:id/:entity', queryParam, {
+    function getResource(params) {
+        return $resource(apiUrl + '/band/:id/:entity', params, {
             getBand: {
                 method: 'GET',
                 isArray: false,
