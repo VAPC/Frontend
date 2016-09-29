@@ -29,6 +29,9 @@
             .when('/bandCreate', {
                 templateUrl: 'bandCreate.html',
             })
+            .when('/bandEdit/:id', {
+                templateUrl: 'bandEdit.html',
+            })
             .when('/search?:bla', {
                 templateUrl: 'search.html',
             })
