@@ -31,7 +31,7 @@
 
         function formSubmit() {
 
-            bandEndpoint.getResource().editBand(this.bandData, function(response) {
+            bandEndpoint.getResource({id: vm.id}).editBand(this.bandData, function(response) {
                 console.log('cl response', response);
 
                 $ngRedux.dispatch(actions.location('/band/' + vm.id));

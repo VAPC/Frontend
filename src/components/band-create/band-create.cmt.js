@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
     angular
         .module('rockparade')
@@ -16,20 +16,20 @@
                             $ngRedux,
                             actions) {
         var vm = this;
-        this.formData = {
+        vm.formData = {
             name: '',
             description: ''
         };
-        this.formSubmit = formSubmitHandler;
+        vm.formSubmit = formSubmitHandler;
 
         return vm;
 
         function formSubmitHandler(e) {
-            bandEndpoint.getResource().createBand(this.formData, function (response) {
+            bandEndpoint.getResource().createBand(vm.formData, function(response) {
                 console.log('cl response', response);
 
                 $ngRedux.dispatch(actions.location('/bands'));
-            },function (response) {
+            }, function(response) {
                 console.log('cl response', response);
             });
         }
