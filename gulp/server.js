@@ -17,6 +17,7 @@ gulp.task('serve', gulpsync.sync([
     'dev:js',
     'copy:images',
     'copy:favicon',
+    'copy:assets',
 ]), function () {
 
     browserSync.init({
@@ -67,6 +68,11 @@ gulp.task('copy:images', function () {
 gulp.task('copy:favicon', function () {
     return gulp.src(['src/favicon.png'])
         .pipe(gulp.dest('dev'));
+});
+
+gulp.task('copy:assets', function () {
+    return gulp.src(['src/assets/**/*'])
+        .pipe(gulp.dest('dev/assets'));
 });
 
 gulp.task('make:index', gulpsync.sync(['copy:index']));

@@ -23,14 +23,12 @@
 
     function template() {
         return `
-            <div class="navbar navbar-default">
                 <ul class="nav navbar-nav"> 
-                    <li ng-if="$ctrl.isAuth"><a href="#/home">Моя страница</a></li> 
-                    <li><a href="#/events">Мероприятия</a></li> 
-                    <li><a href="#/bands">Артисты</a></li> 
-                    <li><a>Блог</a></li> 
+                    <li ng-if="$ctrl.isAuth"><a href="#/home">Моя страница</a></li>
+                    <li><a href="#/bands">Артисты</a></li>   
+                    <li><a href="#/locations">Площадки</a></li> 
+                    <li><a href="#/events">Мероприятия</a></li>
                 </ul>
-            </div>
         `;
     }
 

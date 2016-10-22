@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+          name="viewport">
+    <title>Pay4me</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:600&subset=latin,cyrillic' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="style/style.css?ver=35">
+</head>
+
+<body>
+<div class="topmenu">
+    <div class="topmenu__header">
+        <div class="topmenu__btn-holder">
+            <button class="topmenu__btn js-menu-open-toggle">Меню</button>
+        </div>
+        <div class="topmenu__logo">
+            <a href="#block1">
+                <img src="style/img/logo_lp1.png" alt="pay4me">
+                <p>Сервис оплаты для интернет магазинов</p>
+            </a>
+        </div>
+    </div>
+    <div class="topmenu__holder">
+        <div class="full-block">
+            <div class="topmenu__top">
+                <div class="topmenu__menu left-side__menu">
+                    <ul class="menu">
+                        <li data-menuanchor="block2"><a href="#block2">Описание сервиса</a></li>
+                        <li data-menuanchor="block3"><a href="#block3">Как это работает</a></li>
+                        <li data-menuanchor="block4"><a href="#block4">Ценность для клиента</a></li>
+                        <li data-menuanchor="block5"><a href="#block5">Преимущества для интернет-магазинов</a></li>
+                        <li data-menuanchor="block6"><a href="#block6">Личный кабинет и промо-материалы</a></li>
+                        <li data-menuanchor="block7"><a href="#block7">Вопрос-ответ</a></li>
+                        <li data-menuanchor="block8"><a href="#block8">Наша команда</a></li>
+                        <li data-menuanchor="block9"><a href="#block9">Как подключиться к сервису</a></li>
+                    </ul>
+                    <div class="topmenu__order">
+                        <a href="#block9">Оставить заявку на подключение</a>
+                    </div>
+                </div>
+            </div>
+            <div class="topmenu__bottom">
+                <div class="topmenu__links">
+                    <a href="http://demo.pay4mebutton.com" target="_blank" class="topmenu__links-demo-shop"><span
+                            class="link-text">Перейти в демо-магазин</span>
+                        <span class="link-new-window"></span></a>
+                    <a href="index.html#block1" class="topmenu__links-enter-lk"><span
+                            class="link-text">Войти в личный кабинет</span>
+                        <span class="link-new-window"></span></a>
+                </div>
+                <div class="topmenu__footer">
+                    <div class="topmenu__footer-contact-info">
+                        <div class="topmenu__footer-contact-title">Контактная информация</div>
+                        <table class="topmenu__footer-contact-table">
+                            <tr>
+                                <td class="topmenu__hidden-md">Телефон</td>
+                                <td>8 800 324-87-89</td>
+                            </tr>
+                            <tr>
+                                <td class="topmenu__hidden-md">Адрес</td>
+                                <td>Санкт-Петербург, Невский, 100</td>
+                            </tr>
+                            <tr>
+                                <td class="topmenu__hidden-md">Почта</td>
+                                <td>hello@pay4me.com</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="topmenu__footer-language">
+                        <div class="link-language"><a href="index.html#block1">In English please</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-holder">
+    <div class="left-side">
+        <div class="left-side__header">
+            <a href="#block1">
+                <img src="style/img/logo_lp1.png" alt="pay4me">
+                <p>Сервис оплаты для интернет магазинов</p>
+            </a>
+        </div>
+        <div class="left-side__menu">
+            <ul id="menu" class="menu">
+                <li data-menuanchor="block2"><a href="#block2">Описание сервиса</a></li>
+                <li data-menuanchor="block3"><a href="#block3">Как это работает</a></li>
+                <li data-menuanchor="block4"><a href="#block4">Ценность для клиента</a></li>
+                <li data-menuanchor="block5"><a href="#block5">Преимущества для интернет-магазинов</a></li>
+                <li data-menuanchor="block6"><a href="#block6">Личный кабинет и промо-материалы</a></li>
+                <li data-menuanchor="block7"><a href="#block7">Вопрос-ответ</a></li>
+                <li data-menuanchor="block8"><a href="#block8">Наша команда</a></li>
+                <li data-menuanchor="block9"><a href="#block9">Как подключиться к сервису</a></li>
+            </ul>
+            <div class="left-side__order">
+                <a href="#block9">Оставить заявку</a>
+            </div>
+        </div>
+        <div class="left-side__links">
+            <a href="http://demo.pay4mebutton.com"
+               target="_blank"
+               class="left-side__links-demo-shop"><span class="link-text">Перейти в демо-магазин</span>
+                <span class="link-new-window"></span></a>
+            <a href="index.html#block1" class="left-side__links-enter-lk"><span
+                    class="link-text">Войти в личный кабинет</span>
+                <span class="link-new-window"></span></a>
+        </div>
+        <div class="left-side__footer">
+            <div class="left-side__footer-contact-info">
+                <div class="left-side__footer-contact-title left-side__hidden-md">Контактная информация</div>
+                <table class="left-side__footer-contact-table">
+                    <tr>
+                        <td class="left-side__hidden-md">Телефон</td>
+                        <td>8 800 324-87-89</td>
+                    </tr>
+                    <tr>
+                        <td class="left-side__hidden-md">Адрес</td>
+                        <td>Санкт-Петербург, Невский, 100</td>
+                    </tr>
+                    <tr>
+                        <td class="left-side__hidden-md">Почта</td>
+                        <td>hello@pay4me.com</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="left-side__footer-language">
+                <div class="link-language"><a href="index.html#block1">In English please</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="call-back">
+        <div class="call-back__small">
+            <div id="js-call-back" class="call-back-with with-block1">
+                <div class="call-back__small-phone">
+                    8 800 324-87-89
+                </div>
+                <div class="call-back__small-order js-call-back-open">
+                    <a href="javascript:void(0);">Заказать обратный звонок</a>
+                </div>
+            </div>
+        </div>
+        <div class="call-back__big call-back__big--closed">
+            <div class="call-back__big-close icon-cross-white js-call-back-close"></div>
+            <div class="call-back__big-content">
+                <div class="call-back__big-title">Заказать звонок</div>
+                <div class="call-back__big-tizer">Оставьте свой телефон и наши менеджеры свяжутся с вами в кротчайшие
+                    сроки и ответят на все вопросы
+                </div>
+                <div class="call-back__big-form pay4me-form">
+                    <form action="#" id="">
+                        <div class="form-group">
+                            <input type="text" id="call-name" name="call-name" class="form-control adaptive-placeholder"
+                                   required>
+                            <label for="call-name">Ваше имя</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="call-tel" name="call-tel" class="form-control adaptive-placeholder"
+                                   required>
+                            <label for="call-tel">Телефон</label>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit">Отправить заявку</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="call-back__big-footer">
+                <div class="call-back__big-footer-title">
+                    Заявка на подключение
+                </div>
+                <div class="call-back__big-footer-tizer">
+                    Если же вопросов у вас больше нет, то скорее оставьте заявку на подключение
+                </div>
+                <div class="right-side__order">
+                    <a href="#block9">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+
+        <!-- BLOCK 1 -->
+        <div class="section">
+            <div class="block block1 js-parallax-bg">
+                <div class="block1__free"></div>
+                <div class="block1__tizer">
+                    <div class="block1__tizer-bottom">
+                        <div class="block1__title">Волшебная кнопка</div>
+                        <div class="block1__title">«Оплати за меня»</div>
+                        <div class="block1__title-under-text animate-hidden delay1">
+                            Наш сервис позволяет друзьям, коллегам, и родным вашего клиента оплачивать товары из его
+                            корзины
+                        </div>
+                    </div>
+                    <div class="block1__btn-holder animate-hidden delay2">
+                        <a href="#block9" class="btn-pay4me">Оставить заявку на подключение</a>
+                    </div>
+                </div>
+                <a href="#block2" class="block1__down">
+                    Узнать больше
+                </a>
+            </div>
+        </div>
+        <!-- end block 1 -->
+
+        <!-- BLOCK 2 -->
+        <div class="section">
+            <div class="block block2 js-parallax-bg">
+                <div class="block2__tizer">
+                    <div class="block2__tizer-title">Оплати за меня</div>
+                    <div class="block2__tizer-text animate-hidden delay1">Теперь вы не будете терять клиентов, которые
+                        не могут оплатить свой
+                        заказ!
+                    </div>
+                    <div class="block2__tizer-text animate-hidden delay2">Просто разместите наш кнопку у себя на сайте и
+                        ваши клиенты смогут
+                        привлекать к оплате своих родных, друзей и коллег!
+                    </div>
+                </div>
+                <div class="block2__notebook-holder">
+                    <div class="block2__notebook">
+                        <img src="style/img/macbook_1x.png" alt="">
+                        <div class="block2__notebook-display js-parallax-lens"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end block 2 -->
+
+        <!-- BLOCK 3 -->
+        <div class="section">
+            <div class="block block3 js-parallax-bg">
+                <div class="block3__tizer">
+                    <div class="block3__tizer-title">Как это работает?</div>
+                    <div class="block3__tizer-text animate-hidden delay1">Отсутствие денежных средств больше не
+                        проблема.
+                    </div>
+                    <div class="block3__tizer-text animate-hidden delay2">Позвольте друзьям вашего клиента оплачивать
+                        покупки в
+                        интернет-магазинах!
+                    </div>
+                </div>
+                <div class="block3__steps-holder animate-hidden delay3">
+                    <div class="steps">
+                        <div class="steps__pink steps__add-to-cart">Добавление товаров в корзину</div>
+                        <div class="steps__pink steps__next"></div>
+                        <div class="steps__pay4me animate-hidden delay4">
+                            <div class="steps__pay4me-title">Сервис pay4me на вашем сайте</div>
+                            <div class="steps__pay4me-steps">
+                                <div class="steps__white steps__pay4me-step-invite animate-hidden delay5">Приглашение
+                                    спонсоров
+                                </div>
+                                <div class="steps__white steps__pay4me-step-next animate-hidden delay6"></div>
+                                <div class="steps__white steps__pay4me-step-pay animate-hidden delay6">
+                                    Внедрение спонсоров в платежный шлюз и оплата
+                                </div>
+                            </div>
+                        </div>
+                        <div class="steps__pink steps__next animate-hidden delay7"></div>
+                        <div class="steps__pink steps__get-goods animate-hidden delay7">Получение товаров</div>
+                    </div>
+                </div>
+                <div class="block3__testing animate-hidden delay8">
+                    <div class="block3__testing-title">
+                        Протестируйте работу сервиса
+                        <span class="nowrap">в нашем
+                            <a href="http://demo.pay4mebutton.com"
+                               class="link-pink"
+                               target="_blank">Демо-магазине</a></span>
+                    </div>
+                    <div class="block3__testing-text">Магазин откроется в новом окне</div>
+                </div>
+            </div>
+        </div>
+        <!-- end block 3 -->
+
+        <!-- BLOCK 4 -->
+        <div class="section">
+            <div class="block block4">
+                <div class="block4__title">Ценность для вашего клиента</div>
+                <div class="block4__row animate-hidden delay1">
+                    <div class="block4__row-icon icon-love-people"></div>
+                    <div class="block4__row-title">Новый способ оплаты</div>
+                    <div class="block4__row-text">Необязательно оплачивать товар самому, теперь можно запросить оплату у
+                        друзей, коллег и родных
+                    </div>
+                </div>
+                <div class="block4__row animate-hidden delay2">
+                    <div class="block4__row-icon icon-fastest"></div>
+                    <div class="block4__row-title">Мгновенное подключение спонсоров</div>
+                    <div class="block4__row-text">Без утомительной регистрации, сбора корзины и указания контактной
+                        информации
+                    </div>
+                </div>
+                <div class="block4__row animate-hidden delay3">
+                    <div class="block4__row-icon icon-ways"></div>
+                    <div class="block4__row-title">Совершение покупок по моделям</div>
+                    <div class="block4__row-text">Совершение покупок по различным моделям</div>
+                </div>
+            </div>
+        </div>
+        <!-- end block 4 -->
+
+        <!-- BLOCK 5 -->
+        <div class="section">
+            <div class="block block5 js-parallax-bg">
+                <div class="block5__title">Преимущества использования сервиса для интернет-магазина</div>
+                <div class="block5__privileges">
+                    <div class="block5__privileges-item animate-hidden delay1">
+                        <div class="block5__privileges-item-icon icon-here-and-now"></div>
+                        <div class="block5__privileges-item-title">Все продажи здесь и сейчас</div>
+                        <div class="block5__privileges-item-text">
+                            Без вишлистов, отложенных товаров и отправления ссылок
+                        </div>
+                    </div>
+                    <div class="block5__privileges-item animate-hidden delay2">
+                        <div class="block5__privileges-item-icon icon-bigest-sales"></div>
+                        <div class="block5__privileges-item-title">Увеличение продаж</div>
+                        <div class="block5__privileges-item-text">
+                            Увеличение количества товаров в чеке за счет их оплаты третьими лицами
+                        </div>
+                    </div>
+                    <div class="block5__privileges-item animate-hidden delay3">
+                        <div class="block5__privileges-item-icon icon-up-conversion"></div>
+                        <div class="block5__privileges-item-title">Повышение конверсии</div>
+                        <div class="block5__privileges-item-text">
+                            За счет уменьшения доли отложенных товаров
+                        </div>
+                    </div>
+                    <div class="block5__privileges-item animate-hidden delay4">
+                        <div class="block5__privileges-item-icon icon-up-finger"></div>
+                        <div class="block5__privileges-item-title">
+                            Укрепление лояльности и повышение конкурентоспособности
+                        </div>
+                        <div class="block5__privileges-item-text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end block 5 -->
+
+        <!-- BLOCK 6 -->
+        <div class="section">
+            <div class="block block6">
+                <div class="block6__title">Личный кабинет и промо-материалы</div>
+                <div class="block6__services">
+                    <div class="block6__services-list">
+                        <div class="block6__services-list-item animate-hidden delay1">
+                            <div class="block6__services-list-item-icon icon-control"></div>
+                            <div class="block6__services-list-item-text">Управляйте сценариями</div>
+                        </div>
+                        <div class="block6__services-list-item animate-hidden delay2">
+                            <div class="block6__services-list-item-icon icon-graph"></div>
+                            <div class="block6__services-list-item-text">Смотрите статистику</div>
+                        </div>
+                        <div class="block6__services-list-item animate-hidden delay3">
+                            <div class="block6__services-list-item-icon icon-costs"></div>
+                            <div class="block6__services-list-item-text">Контролируйте расходы</div>
+                        </div>
+                        <div class="block6__services-list-item animate-hidden delay4">
+                            <div class="block6__services-list-item-icon icon-support"></div>
+                            <div class="block6__services-list-item-text">Общайтесь с поддержкой</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end block 6 -->
+
+        <!-- BLOCK 7 -->
+        <div class="section">
+            <div class="block block7">
+                <div class="block7__title">У вас остались вопросы?</div>
+                <div class="accordion" id="accordion" aria-multiselectable="true">
+
+                    <div class="panel accordion__item">
+                        <div class="accordion__item-heading">
+                            <a class="" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#question1">
+                                Вопрос 1
+                            </a>
+                        </div>
+                        <div id="question1" class="accordion__collapse collapse in">
+                            <div class="accordion__item-body">
+                                Сокращение доли отложенных товаров и перевод их в оплаченные. Возможно увеличение
+                                количества товаров в одном чеке за счет их оплаты третьимими лицамиСокращение доли
+                                отложенных товаров и перевод их в оплаченные. Возможно увеличение количества товаров в
+                                одном чеке за счет их оплаты третьимими лицамиСокращение доли отложенных товаров и
+                                перевод их в оплаченные. Возможно увеличение количества товаров в одном чеке за счет их
+                                оплаты третьимими лицами
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel accordion__item">
+                        <div class="accordion__item-heading">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#question2">
+                                Вопрос 2
+                            </a>
+                        </div>
+                        <div id="question2" class="accordion__collapse collapse">
+                            <div class="accordion__item-body">
+                                Сокращение доли отложенных товаров и перевод их в оплаченные. Возможно увеличение
+                                количества товаров в одном чеке за счет их оплаты третьимими лицамиСокращение доли
+                                отложенных товаров и перевод их в оплаченные. Возможно увеличение количества товаров в
+                                одном чеке за счет их оплаты третьимими лицамиСокращение доли отложенных товаров и
+                                перевод их в оплаченные. Возможно увеличение количества товаров в одном чеке за счет их
+                                оплаты третьимими лицами
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel accordion__item">
+                        <div class="accordion__item-heading">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#question3">
+                                Вопрос 3
+                            </a>
+                        </div>
+                        <div id="question3" class="accordion__collapse collapse">
+                            <div class="accordion__item-body">
+                                Сокращение доли отложенных товаров и перевод их в оплаченные. Возможно увеличение
+                                количества товаров в одном чеке за счет их оплаты третьимими лицамиСокращение доли
+                                отложенных товаров и перевод их в оплаченные. Возможно увеличение количества товаров в
+                                одном чеке за счет их оплаты третьимими лицамиСокращение доли отложенных товаров и
+                                перевод их в оплаченные. Возможно увеличение количества товаров в одном чеке за счет их
+                                оплаты третьимими лицами
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel accordion__item">
+                        <div class="accordion__item-heading">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#question4">
+                                Вопрос 4
+                            </a>
+                        </div>
+                        <div id="question4" class="accordion__collapse collapse">
+                            <div class="accordion__item-body">
+                                Сокращение доли отложенных товаров и перевод их в оплаченные. Возможно увеличение
+                                количества товаров в одном чеке за счет их оплаты третьимими лицамиСокращение доли
+                                отложенных товаров и перевод их в оплаченные. Возможно увеличение количества товаров в
+                                одном чеке за счет их оплаты третьимими лицамиСокращение доли отложенных товаров и
+                                перевод их в оплаченные. Возможно увеличение количества товаров в одном чеке за счет их
+                                оплаты третьимими лицами
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel accordion__item">
+                        <div class="accordion__item-heading">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#question5">
+                                Вопрос 5
+                            </a>
+                        </div>
+                        <div id="question5" class="accordion__collapse collapse">
+                            <div class="accordion__item-body">
+                                Сокращение доли отложенных товаров и перевод их в оплаченные. Возможно увеличение
+                                количества товаров в одном чеке за счет их оплаты третьимими лицамиСокращение доли
+                                отложенных товаров и перевод их в оплаченные. Возможно увеличение количества товаров в
+                                одном чеке за счет их оплаты третьимими лицамиСокращение доли отложенных товаров и
+                                перевод их в оплаченные. Возможно увеличение количества товаров в одном чеке за счет их
+                                оплаты третьимими лицами
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel accordion__item accordion__item--hide">
+                        <div class="accordion__item-heading">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#question6">
+                                Вопрос 6
+                            </a>
+                        </div>
+                        <div id="question6" class="accordion__collapse collapse">
+                            <div class="accordion__item-body">
+                                Сокращение доли отложенных товаров и перевод их в оплаченные. Возможно увеличение
+                                количества товаров в одном чеке за счет их оплаты третьимими лицамиСокращение доли
+                                отложенных товаров и перевод их в оплаченные. Возможно увеличение количества товаров в
+                                одном чеке за счет их оплаты третьимими лицамиСокращение доли отложенных товаров и
+                                перевод их в оплаченные. Возможно увеличение количества товаров в одном чеке за счет их
+                                оплаты третьимими лицами
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel accordion__item accordion__item--hide">
+                        <div class="accordion__item-heading">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#question7">
+                                Вопрос 7
+                            </a>
+                        </div>
+                        <div id="question7" class="accordion__collapse collapse">
+                            <div class="accordion__item-body">
+                                Сокращение доли отложенных товаров и перевод их в оплаченные. Возможно увеличение
+                                количества товаров в одном чеке за счет их оплаты третьимими лицамиСокращение доли
+                                отложенных товаров и перевод их в оплаченные. Возможно увеличение количества товаров в
+                                одном чеке за счет их оплаты третьимими лицамиСокращение доли отложенных товаров и
+                                перевод их в оплаченные. Возможно увеличение количества товаров в одном чеке за счет их
+                                оплаты третьимими лицами
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item accordion__item--last">
+                        <a href="#block7" class="js-show-more-questions">Показать еще вопросы</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end block 7 -->
+
+        <!-- BLOCK 8 -->
+        <div class="section">
+            <div class="block block8">
+                <div class="block8__title">Наша команда</div>
+                <div class="block8__tizer">Встречайте наших супергероев</div>
+                <div class="block8__crew">
+                    <div class="block8__crew-item animate-hidden delay1">
+                        <div class="block8__crew-item-photo"><img src="./style/img/photo-1.jpg" alt=""></div>
+                        <div class="block8__crew-item-name">Джонни Депп</div>
+                        <div class="block8__crew-item-skill">СЕО</div>
+                    </div>
+                    <div class="block8__crew-item animate-hidden delay1">
+                        <div class="block8__crew-item-photo"><img src="./style/img/photo-2.jpg" alt=""></div>
+                        <div class="block8__crew-item-name">Джордж Клуни</div>
+                        <div class="block8__crew-item-skill">СТО</div>
+                    </div>
+                    <div class="block8__crew-item animate-hidden delay2">
+                        <div class="block8__crew-item-photo"><img src="./style/img/photo-1.jpg" alt=""></div>
+                        <div class="block8__crew-item-name">Джонни Депп</div>
+                        <div class="block8__crew-item-skill">СЕО</div>
+                    </div>
+                    <div class="block8__crew-item animate-hidden delay2">
+                        <div class="block8__crew-item-photo"><img src="./style/img/photo-2.jpg" alt=""></div>
+                        <div class="block8__crew-item-name">Джордж Клуни</div>
+                        <div class="block8__crew-item-skill">СТО</div>
+                    </div>
+                    <div class="block8__crew-item animate-hidden delay3">
+                        <div class="block8__crew-item-photo"><img src="./style/img/photo-1.jpg" alt=""></div>
+                        <div class="block8__crew-item-name">Джонни Депп</div>
+                        <div class="block8__crew-item-skill">СЕО</div>
+                    </div>
+                    <div class="block8__crew-item animate-hidden delay3">
+                        <div class="block8__crew-item-photo"><img src="./style/img/photo-2.jpg" alt=""></div>
+                        <div class="block8__crew-item-name">Джордж Клуни</div>
+                        <div class="block8__crew-item-skill">СТО</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end block 8 -->
+
+        <!-- BLOCK 9 -->
+        <div class="section">
+            <div class="block block9">
+                <div class="block9__title">Подключаемся к сервису</div>
+                <div class="block9__tizer">Все заботы мы берем на себя!</div>
+                <div class="block9__content">
+                    <div class="block9__content-tizer">
+                        Чтобы подключиться к сервису в первую очередь необходимо оформить заявку на подключение.<br>
+                        Затем мы сформируем ваш личный кабинет и пришлем вам данные для входа!
+                    </div>
+                    <div class="block9__form pay4me-form">
+                        <form id="form-order" action="#">
+                            <div class="block9__form-header">Самое время оформить заявку</div>
+                            <div class="block9__form-body">
+                                <div class="form-group">
+                                    <input id="name" type="text" class="form-control adaptive-placeholder" required>
+                                    <label for="name">Контактное лицо</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input id="phone" type="text" class="form-control adaptive-placeholder"
+                                                   required>
+                                            <label for="phone">Телефон</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input id="email" type="text" class="form-control adaptive-placeholder"
+                                                   required>
+                                            <label for="email">Почта</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input id="site" type="text" class="form-control adaptive-placeholder" required>
+                                    <label for="site">Адрес вашего сайта</label>
+                                </div>
+                            </div>
+                            <div class="block9__form-footer">
+                                <button class="btn btn-primary" type="submit">Отправить заявку</button>
+                            </div>
+                        </form>
+                        <form id="form-thanks" action="#">
+                            <div class="block9__form-header">Самое время оформить заявку</div>
+                            <div class="block9__form-body">
+                                <div class="block9__form-body-sent">
+                                    <div>
+                                        Ваше сообщение отправлено!<br>
+                                        Мы свяжемся с вами в самое ближайшее время.
+                                    </div>
+                                    <div class="block9__form-body-smile icon-big-smile"></div>
+                                </div>
+                            </div>
+                            <div class="block9__form-footer">
+                                <button class="btn btn-primary" type="submit">Отправить еще одну заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="block9__footer">
+                    <div class="pull-left">&copy; 2016 pay4me</div>
+                    <div class="pull-right powered">Powered by Mutyda</div>
+                </div>
+            </div>
+        </div>
+        <!-- end block 9 -->
+
+
+    </div>
+</div>
+
+<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="./js/jquery.fullpage.min.js"></script>
+<script type="text/javascript" src="./js/pay4me_lp.js?ver=35"></script>
+</body>
+</html>
