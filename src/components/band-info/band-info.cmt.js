@@ -35,6 +35,33 @@
 
     function template() {
         return `
+            <div class="content__band">
+                <div class="hero-image"></div>
+                <div class="side">
+                    <div class="side-left">
+                        <div class="band__left-box">
+                            <div class="band__photo"><img src="../assets/anton.png"></div>
+                            <div class="band__subscribe"><button class="btn btn-default">Подписан</button></div>
+                            <div class="band__counters">9999</div>
+                        </div>       
+                        <div class="band__left-box">
+                            <div class="left-box__header">Состоит в группах 2</div>
+                            <div class="left-box__groups">
+                                <div class="groups__group"></div>
+                            </div>
+                        </div>               
+                    </div>
+                    <div class="side-center">
+                        <div class="upper">
+                            <div class="upper__name">Антон Кореляков</div>
+                            <div class="upper__buttons">
+                                <button class="btn btn-default">Сообщение</button>
+                                <button class="btn btn-default">Пригласить</button>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
             <div ng-hide="$ctrl.bandData">Loading...</div>
             <div ng-show="$ctrl.bandData">
                 <div class="panel panel-default">

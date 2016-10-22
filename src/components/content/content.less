@@ -1,0 +1,47 @@
+header {
+    background: #cccccc;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.side {
+    width: 1200px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+.side-left {
+    float: left;
+    width: 300px;
+    position: relative;
+    top: -70px;
+    text-align: center;
+}
+.side-center {
+    padding-left: 300px;
+    position: relative;
+    top: -70px;
+}
+
+.hero-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 50%;
+    background-color: #e0e0e0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-image: url('../assets/band-bg.jpg');
+}
+
+.content__band {
+    position: relative;
+    padding-top: 300px;
+}
