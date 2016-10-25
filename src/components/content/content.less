@@ -1,9 +1,26 @@
-header {
-    background: #cccccc;
-    position: fixed;
-    width: 100%;
-    z-index: 2;
+@import "../../less/variables";
+
+body {
+    min-height: 100vh;
+    background-color: #F2F2F2;
 }
+
+.page-holder {
+
+}
+
+.top-menu {
+    background: @topMenuBackgroundColor;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.top-menu__holder {
+    max-width: @maxWidthContent;
+    margin: 0 auto;
+}
+
 .side {
     width: 1200px;
     margin: 0 auto;
@@ -44,4 +61,11 @@ header {
 .content__band {
     position: relative;
     padding-top: 300px;
+}
+
+.content {
+    min-height: 100%;
+    &.has-top-menu {
+        padding-top: @topMenuHeight;
+    }
 }

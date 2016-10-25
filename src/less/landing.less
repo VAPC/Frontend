@@ -1,2 +1,46 @@
-body {
+@import "../less/variables";
+
+.landing {
+    max-width: @maxWidthContent;
+    margin: 0 auto;
+
+    &__center {
+        text-align: center;
+        margin: 50px 0;
+
+        h2 {
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__white-box {
+        border-radius: 5px;
+        border: 1px solid #CCCCCC;
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 5px rgba(100,100,100,0.3);
+    }
+
+    &__white-box-item {
+        margin: 50px;
+        h3 {
+            text-align: center;
+        }
+    }
+}
+
+.landing {
+    &__why-circle {
+        border: 1px solid #CCCCCC;
+        border-radius: 50%;
+        width: 170px;
+        height: 170px;
+        margin: 20px auto;
+    }
+    &__what-squire {
+        border: 1px solid #CCCCCC;
+        width: 300px;
+        height: 170px;
+        margin: 20px auto;
+    }
 }

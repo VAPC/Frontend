@@ -51,9 +51,9 @@
 
     function template() {
         return `
-            <div>
+            <div class="search-widget">
                 <input type="search" 
-                    class="form-control" 
+                    class="form-control input-sm" 
                     ng-keypress="$ctrl.searchKeyPress($event)"
                     ng-keyup="$ctrl.searchKeyUp($event)"
                     ng-model="$ctrl.query"
