@@ -41,12 +41,13 @@
 
     function template() {
         return `
-            <div ng-if="!$ctrl.isAuth">
-            <a href="{{$ctrl.loginUrl}}">Login with Vkontakte</a>
+            <div class="auth-widget__btn-holder" 
+                 ng-if="!$ctrl.isAuth">
+                <a class="btn btn-default btn-sm" href="{{$ctrl.loginUrl}}">Войти</a>
             </div>
             <div ng-if="$ctrl.isAuth">
-            <div>Hi, {{$ctrl.user.login}}!</div>
-            <a ng-click="$ctrl.logout()">Logout</a>
+                <div>Hi, {{$ctrl.user.login}}!</div>
+                <a ng-click="$ctrl.logout()">Logout</a>
             </div>
          `;
     }

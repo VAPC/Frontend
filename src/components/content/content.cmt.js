@@ -37,24 +37,21 @@
 
     function template() {
         return `
-            <div class="page-holder">
-                <div class="container-fluid">
-                    <header class="row">
-                        <div class="col-sm-1"><a href="#/"><img src="css/img/logo2.png" alt="Rockparade"></a></div>
-                        <div class="col-sm-5">
+            <div class="top-menu">
+                <div class="top-menu__holder">
+                    <div class="row">
+                        <div class="col-sm-2"><a href="#/"><img src="css/img/logo2.png" alt="Rockparade"></a></div>
+                        <div class="col-sm-8">
                             <navigation></navigation>
                         </div>
-                        <div class="col-sm-3">
-                            <search-widget></search-widget>
-                        </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <auth-widget></auth-widget>
                         </div>
-                    </header>
+                    </div>
                 </div>
-                <div class="content">
-                    <div ng-view=""></div>
-                </div>
+            </div>
+            <div class="content has-top-menu">
+                <div ng-view=""></div>
             </div>
         `;
     }
