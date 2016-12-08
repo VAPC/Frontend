@@ -11,14 +11,20 @@
     // }
 
     httpInterceptorRun.$inject = ['$injector'];
+
     function httpInterceptorRun($injector) {
         'use strict';
 
         var TOKEN = $injector.get('$cookies').get('AUTH-TOKEN');
+        console.log('cl TOKEN', TOKEN);
         if (TOKEN) {
 
             var $http = $injector.get('$http');
-            $http.defaults.headers.common['AUTH-TOKEN'] = TOKEN;
+            //$http.defaults.headers.common['AUTH-TOKEN'] = TOKEN;
+            // $http.defaults.headers.common['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, X-Requested-With';
+            $http.defaults.headers.common['Access-Control-Request-Headers'] = 'accept, origin, authorization, key';
+            $http.defaults.headers.common['AUTH-TOKEN'] = 'test';
+
             // $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
             // $http.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
 
