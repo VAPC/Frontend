@@ -10,6 +10,8 @@
             changeSearchString: changeSearchString,
             location: location,
             hashSearch:hashSearch,
+            setBandListSorting:setBandListSorting,
+            setBandListViewing:setBandListViewing,
         };
 
         function changeSearchString(value) {
@@ -29,6 +31,20 @@
             return {
                 type: 'HASH_SEARCH',
                 value: value
+            }
+        }
+
+        function setBandListSorting(id){
+            return {
+                type: 'SET_BAND_LIST_SORTING',
+                payload: id
+            }
+        }
+
+        function setBandListViewing(id){
+            return {
+                type: 'SET_BAND_LIST_VIEWING',
+                payload: id
             }
         }
     }

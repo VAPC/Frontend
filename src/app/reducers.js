@@ -1,6 +1,6 @@
-(function () {
+(function() {
 
-    var defaultState = {
+    const defaultState = {
         location: {
             path: '',
             hashSearch: '',
@@ -12,6 +12,13 @@
             uid: '',
             name: '',
         },
+        bandList: {
+            sorting: 0,
+            viewing: 0,
+            filter: {
+                search: ''
+            }
+        }
     };
 
     function reducers(state = defaultState, action) {
@@ -27,7 +34,20 @@
             case 'HASH_SEARCH':
                 state.location.hashSearch = action.value;
                 return Object.assign(state);
-
+            case 'SET_BAND_LIST_SORTING':
+                const bandListSorting = Object.assign({}, state.bandList, {
+                    sorting: action.payload
+                });
+                return Object.assign({}, state, {
+                    bandList: bandListSorting
+                });
+            case 'SET_BAND_LIST_VIEWING':
+                const bandListViewing = Object.assign({}, state.bandList, {
+                    viewing: action.payload
+                });
+                return Object.assign({}, state, {
+                    bandList: bandListViewing
+                });
             default:
                 return state;
 
@@ -41,7 +61,13 @@
     ngReduxConfig.$inject = ['$ngReduxProvider'];
 
     function ngReduxConfig($ngReduxProvider) {
-        $ngReduxProvider.createStoreWith(reducers);
+        const logger = (store) => (next) => (action) => {
+            console.log('dispatching', action);
+            const result = next(action);
+            console.log('next state', store.getState());
+            return result;
+        };
+        $ngReduxProvider.createStoreWith(reducers, [logger]);
     }
 
 }());
