@@ -9,9 +9,10 @@
         return {
             changeSearchString: changeSearchString,
             location: location,
-            hashSearch:hashSearch,
-            setBandListSorting:setBandListSorting,
-            setBandListViewing:setBandListViewing,
+            hashSearch: hashSearch,
+            setCurrentUser: setCurrentUser,
+            setBandListSorting: setBandListSorting,
+            setBandListViewing: setBandListViewing,
         };
 
         function changeSearchString(value) {
@@ -27,6 +28,7 @@
                 value: value
             }
         }
+
         function hashSearch(value) {
             return {
                 type: 'HASH_SEARCH',
@@ -34,17 +36,24 @@
             }
         }
 
-        function setBandListSorting(id){
+        function setBandListSorting(id) {
             return {
                 type: 'SET_BAND_LIST_SORTING',
                 payload: id
             }
         }
 
-        function setBandListViewing(id){
+        function setBandListViewing(id) {
             return {
                 type: 'SET_BAND_LIST_VIEWING',
                 payload: id
+            }
+        }
+
+        function setCurrentUser(payload) {
+            return {
+                type: 'SET_CURRENT_USER',
+                payload: payload
             }
         }
     }

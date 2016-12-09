@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     const defaultState = {
         location: {
@@ -47,6 +47,10 @@
                 });
                 return Object.assign({}, state, {
                     bandList: bandListViewing
+                });
+            case 'SET_CURRENT_USER':
+                return Object.assign({}, state, {
+                    user: action.payload
                 });
             default:
                 return state;
