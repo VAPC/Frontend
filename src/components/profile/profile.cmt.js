@@ -85,7 +85,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="item in $ctrl.user.created_bands track by item.id">
+                            <tr ng-repeat="item in $ctrl.user.events track by item.id">
                                 <td><a href="#/band/{{item.id}}">{{item.name}}</a></td>
                                 <td>{{item.description}}</td>
                                 <td>{{item.creator}}</td>
