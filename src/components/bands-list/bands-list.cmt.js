@@ -33,6 +33,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
+            <h3>Артисты и группы</h3>
             <div class="bl-content">
                 <div class="bl-header">
                     <div class="bl-sorting">
@@ -63,7 +64,7 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="item in $ctrl.bands track by item.id">
-                                <td>{{item.name}}</td>
+                                <td><a href="#/band/{{item.id}}">{{item.name}}</a></td>
                                 <td>{{item.description}}</td>
                                 <td>{{item.creator}}</td>
                                 <td>{{item.registration_date}}</td>
@@ -121,7 +122,7 @@
         this.$onInit = $onInit;
         this.$onDestroy = $onDestroy;
 
-        this.getBands = memoize((value) => {
+        vm.getBands = memoize((value) => {
             bandsEndpoint.getResource().getBands({}, function(response) {
                 vm.bands = response.data;
             });
@@ -130,7 +131,7 @@
         let unconnect = $ngRedux.connect(mapState, mapDispatch())(vm);
 
         function $onInit() {
-            this.getBands();
+            vm.getBands();
         }
 
         function mapState(state) {

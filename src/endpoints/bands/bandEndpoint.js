@@ -1,9 +1,9 @@
 angular.module('endpointsModule')
     .service('bandEndpoint', bandEndpoint);
 
-bandEndpoint.$inject = ['$resource', 'apiUrl', '$q'];
+bandEndpoint.$inject = ['$resource', 'apiUrl'];
 
-function bandEndpoint($resource, apiUrl, $q) {
+function bandEndpoint($resource, apiUrl) {
     'use strict';
 
     return {
