@@ -59,6 +59,7 @@
                                 <th>Описание</th>
                                 <th>Автор</th>
                                 <th>Дата создания</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -67,6 +68,7 @@
                                 <td>{{item.description}}</td>
                                 <td>{{item.creator}}</td>
                                 <td>{{item.registration_date}}</td>
+                                <td><a href="#/bandEdit/{{item.id}}">Редактировать</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -79,17 +81,19 @@
                         <thead>
                             <tr>
                                 <th>Название</th>
+                                <th>Место</th>
                                 <th>Описание</th>
                                 <th>Автор</th>
-                                <th>Дата создания</th>
+                                <th>Дата мероприятия</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr ng-repeat="item in $ctrl.user.events track by item.id">
                                 <td><a href="#/band/{{item.id}}">{{item.name}}</a></td>
+                                <td>{{item.place}}</td>
                                 <td>{{item.description}}</td>
                                 <td>{{item.creator}}</td>
-                                <td>{{item.registration_date}}</td>
+                                <td>{{item.date}}</td>
                             </tr>
                         </tbody>
                     </table>

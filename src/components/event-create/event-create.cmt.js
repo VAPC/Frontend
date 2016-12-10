@@ -28,7 +28,7 @@
 
         function formSubmitHandler(e) {
             eventEndpoint.getResource().createEvent(vm.formData, function (response) {
-                $ngRedux.dispatch(actions.location('/bands'));
+                $ngRedux.dispatch(actions.location('/home'));
             }, function (response) {
                 console.log('cl response', response);
             });
