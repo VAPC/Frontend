@@ -33,6 +33,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
+            <h3>Артисты и группы</h3>
             <div class="bl-content">
                 <div class="bl-header">
                     <div class="bl-sorting">

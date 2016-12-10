@@ -17,6 +17,9 @@
             .when('/event/:id', {
                 templateUrl: 'event.html',
             })
+            .when('/eventCreate', {
+                templateUrl: 'eventCreate.html',
+            })
             .when('/events', {
                 templateUrl: 'events.html',
             })

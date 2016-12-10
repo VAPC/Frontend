@@ -13,6 +13,7 @@
             setCurrentUser: setCurrentUser,
             setBandListSorting: setBandListSorting,
             setBandListViewing: setBandListViewing,
+            setProfileViewing: setProfileViewing,
         };
 
         function changeSearchString(value) {
@@ -46,6 +47,13 @@
         function setBandListViewing(id) {
             return {
                 type: 'SET_BAND_LIST_VIEWING',
+                payload: id
+            }
+        }
+
+        function setProfileViewing(id) {
+            return {
+                type: 'SET_PROFILE_VIEWING',
                 payload: id
             }
         }

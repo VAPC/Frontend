@@ -48,6 +48,13 @@
                 return Object.assign({}, state, {
                     bandList: bandListViewing
                 });
+            case 'SET_PROFILE_VIEWING':
+                const profileViewing = Object.assign({}, state.profile, {
+                    viewing: action.payload
+                });
+                return Object.assign({}, state, {
+                    profile: profileViewing
+                });
             case 'SET_CURRENT_USER':
                 return Object.assign({}, state, {
                     user: action.payload
